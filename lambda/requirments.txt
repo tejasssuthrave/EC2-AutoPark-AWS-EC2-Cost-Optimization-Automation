@@ -1,0 +1,10 @@
+# requirements.txt
+
+# AWS SDK for Python
+boto3
+
+# AWS Lambda runtime helpers (optional, but useful for local testing)
+botocore
+
+# Date/time utilities (already included in Python standard library, but if you want extended features)
+python-dateutil
