@@ -26,19 +26,12 @@ This project provides a fully serverless automation that:
 
 ---
 
-
 ## 🏗 Architecture Diagram
-
-```mermaid
-flowchart TD
-    A[Amazon EventBridge Scheduler] --> B[AWS Lambda]
-    B --> C[Amazon EC2 Instances]
-    B --> D[Amazon SNS]
-    D --> E[Email Notification]
-
+Amazon EventBridge Scheduler --> AWS Lambda
+AWS Lambda --> Amazon EC2 Instances
+AWS Lambda --> Amazon SNS --> Email Notification
 
 ---
-
 
 ## 🧰 AWS Services Used
 
@@ -51,38 +44,33 @@ flowchart TD
 
 ---
 
-
 ## ⏰ Scheduling Details
 
-| Action | Time (IST) | Days |
-|--------|-----------|------|
-| Start EC2 | 09:00 AM | Monday – Friday |
-| Stop EC2 | 08:00 PM | Monday – Friday |
+| Action   | Time (IST) | Days            |
+|----------|------------|-----------------|
+| Start EC2 | 09:00 AM   | Monday – Friday |
+| Stop EC2  | 08:00 PM   | Monday – Friday |
 
 ### Cron Expressions
 
-Start schedule:
-cron(0 9 ? * MON-FRI *)
+- **Start schedule:**  
+  `cron(0 9 ? * MON-FRI *)`
 
-
-Stop schedule:
-cron(0 20 ? * MON-FRI *)
+- **Stop schedule:**  
+  `cron(0 20 ? * MON-FRI *)`
 
 ---
-
 
 ## 🏷 EC2 Instance Selection (Tag Based)
 
 Only EC2 instances with the following tag are managed:
 
-Key : AutoPark
-Value : true
-
+- **Key:** AutoPark  
+- **Value:** true  
 
 This ensures only intended EC2 instances are started or stopped.
 
 ---
-
 
 ## 📬 Email Notifications (SNS)
 
@@ -114,31 +102,15 @@ The Lambda execution role includes the following permissions:
 
 ---
 
-## 🧪 Lambda Testing
-
-### Start EC2
-```json
-{
-  "action": "start"
-}
-
-Stop EC2
-{
-  "action": "stop"
-}
-
----
-
 ## 💰 Cost Optimization Benefits
 - Prevents EC2 instances from running during off-hours
 - Ideal for development and testing environments
 - Reduces monthly AWS costs
 - Fully serverless solution with minimal operational overhead
 
----
+--- 
 
-## 📁 Repository Structure
-EC2-AutoPark-AWS-EC2-Cost-Optimization-Automation/
+## EC2-AutoPark-AWS-EC2-Cost-Optimization-Automation/
 │
 ├── lambda/
 │   └── ec2_autopark_handler.py
@@ -153,10 +125,10 @@ EC2-AutoPark-AWS-EC2-Cost-Optimization-Automation/
 └── .gitignore
 
 ---
-
 ## 📈 Future Enhancements
 - SMS or WhatsApp notifications
 - Slack integration
 - Auto Scaling Group support
 - Multi-region scheduling
 - Infrastructure as Code (Terraform / CloudFormation)
+
