@@ -35,6 +35,8 @@ flowchart TD
     B --> D[Amazon SNS]
     D --> E[Email Notification]
 
+ ---
+
 ## 🧰 AWS Services Used
 
 - Amazon EC2
@@ -45,6 +47,7 @@ flowchart TD
 - Amazon CloudWatch
 
 ---
+
 
 ## ⏰ Scheduling Details
 
@@ -64,6 +67,7 @@ cron(0 20 ? * MON-FRI *)
 
 ---
 
+
 ## 🏷 EC2 Instance Selection (Tag Based)
 
 Only EC2 instances with the following tag are managed:
@@ -75,6 +79,7 @@ Value : true
 This ensures only intended EC2 instances are started or stopped.
 
 ---
+
 
 ## 📬 Email Notifications (SNS)
 
@@ -120,12 +125,15 @@ Stop EC2
 }
 
 ---
+
 ## 💰 Cost Optimization Benefits
 - Prevents EC2 instances from running during off-hours
 - Ideal for development and testing environments
 - Reduces monthly AWS costs
 - Fully serverless solution with minimal operational overhead
+
 ---
+
 ## 📁 Repository Structure
 EC2-AutoPark-AWS-EC2-Cost-Optimization-Automation/
 │
@@ -140,10 +148,12 @@ EC2-AutoPark-AWS-EC2-Cost-Optimization-Automation/
 │
 ├── README.md
 └── .gitignore
+
 ---
+
 ## 📈 Future Enhancements
 - SMS or WhatsApp notifications
 - Slack integration
 - Auto Scaling Group support
--Multi-region scheduling
+- Multi-region scheduling
 - Infrastructure as Code (Terraform / CloudFormation)
