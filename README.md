@@ -110,7 +110,8 @@ The Lambda execution role includes the following permissions:
 
 --- 
 
-## EC2-AutoPark-AWS-EC2-Cost-Optimization-Automation/
+## 📁 Repository Structure
+EC2-AutoPark-AWS-EC2-Cost-Optimization-Automation/
 │
 ├── lambda/
 │   └── ec2_autopark_handler.py
