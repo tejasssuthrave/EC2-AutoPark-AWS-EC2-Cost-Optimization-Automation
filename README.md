@@ -26,6 +26,7 @@ This project provides a fully serverless automation that:
 
 ---
 
+
 ## 🏗 Architecture Diagram
 
 ```mermaid
@@ -35,7 +36,9 @@ flowchart TD
     B --> D[Amazon SNS]
     D --> E[Email Notification]
 
- ---
+
+---
+
 
 ## 🧰 AWS Services Used
 
