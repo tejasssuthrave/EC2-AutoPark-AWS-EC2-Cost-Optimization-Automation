@@ -100,6 +100,21 @@ The Lambda execution role includes the following permissions:
 - logs:PutLogEvents
 
 ---
+## 🧪 Lambda Function Testing
+
+You can test the Lambda function directly from the AWS Console by providing the following input:
+
+- **Start EC2 Instances**
+  - action: start
+
+- **Stop EC2 Instances**
+  - action: stop
+
+### Expected Behavior
+- When you pass `start`, EC2 instances with the tag `AutoPark=true` will be started and an SNS email notification will be sent.
+- When you pass `stop`, EC2 instances with the tag `AutoPark=true` will be stopped and an SNS email notification will be sent.
+
+--- 
 
 ## 💰 Cost Optimization Benefits
 - Prevents EC2 instances from running during off-hours
