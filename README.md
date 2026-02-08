@@ -126,6 +126,7 @@ EC2-AutoPark-AWS-EC2-Cost-Optimization-Automation/
 └── .gitignore
 
 ---
+
 ## 📈 Future Enhancements
 - SMS or WhatsApp notifications
 - Slack integration
