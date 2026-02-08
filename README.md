@@ -27,9 +27,8 @@ This project provides a fully serverless automation that:
 ---
 
 ## 🏗 Architecture Diagram
-Amazon EventBridge Scheduler --> AWS Lambda
-AWS Lambda --> Amazon EC2 Instances
-AWS Lambda --> Amazon SNS --> Email Notification
+<img width="1536" height="1024" alt="ChatGPT Image Feb 8, 2026, 05_02_24 PM" src="https://github.com/user-attachments/assets/7470d53c-1af6-45e0-af5d-7492807402c3" />
+
 
 ---
 
@@ -109,23 +108,6 @@ The Lambda execution role includes the following permissions:
 - Fully serverless solution with minimal operational overhead
 
 --- 
-
-## 📁 Repository Structure
-EC2-AutoPark-AWS-EC2-Cost-Optimization-Automation/
-│
-├── lambda/
-│   └── ec2_autopark_handler.py
-│
-├── screenshots/
-│   ├── eventbridge-start.png
-│   ├── eventbridge-stop.png
-│   ├── lambda-test.png
-│   └── sns-email.png
-│
-├── README.md
-└── .gitignore
-
----
 
 ## 📈 Future Enhancements
 - SMS or WhatsApp notifications
